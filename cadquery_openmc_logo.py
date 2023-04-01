@@ -3,7 +3,7 @@ import cadquery as cq
 
 from paramak import ExtrudeMixedShape
 
-grey_shape = ExtrudeMixedShape(
+red_shape = ExtrudeMixedShape(
     points=[
         (99.5, 61.5, "straight"),
         (14., 61.5, "circle"),
@@ -14,7 +14,7 @@ grey_shape = ExtrudeMixedShape(
     distance=20,
 ).solid
 
-red_shape = ExtrudeMixedShape(
+grey_shape = ExtrudeMixedShape(
     points=[
         (85.5, 88., "straight"),
         (125.5, 158., "straight"),
@@ -33,7 +33,7 @@ my_model.add_cadquery_object(
 )
 my_model.add_cadquery_object(
     object=red_shape,
-    material_tags=["mat_grey"]
+    material_tags=["mat_red"]
 )
 
 my_model.export_dagmc_h5m_file(
